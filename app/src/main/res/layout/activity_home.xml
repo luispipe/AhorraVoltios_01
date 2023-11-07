@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#D0C882"
+    android:gravity="center_horizontal"
+    android:orientation="vertical"
+    tools:context=".HomeActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="65dp"
+        android:background="#427544"
+        android:orientation="horizontal"></LinearLayout>
+
+    <ImageView
+        android:id="@+id/imageView5"
+        android:layout_width="match_parent"
+        android:layout_height="250dp"
+        app:srcCompat="@drawable/premium_vector___ecology_concept_and_clean_energy_vector_illustration" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="AhorraVoltios"
+        android:textAlignment="center"
+        android:textColor="#345F36"
+        android:textSize="60sp"
+        android:textStyle="bold" />
+
+    <Button
+        android:id="@+id/buttonRegisterConsume"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:backgroundTint="#009688"
+        android:text="Registrar Consumo"
+        android:textSize="34sp"
+        app:cornerRadius="0dp"
+        app:icon="@drawable/baseline_app_registration_24"
+        app:iconSize="55dp" />
+
+    <Button
+        android:id="@+id/buttonStatistics"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:backgroundTint="#187B1C"
+        android:text="Estadísticas"
+        android:textSize="34sp"
+        app:cornerRadius="0dp"
+        app:icon="@drawable/baseline_analytics_24"
+        app:iconSize="55dp" />
+
+    <Button
+        android:id="@+id/buttonRecommendations"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:backgroundTint="#61D466"
+        android:text="Consejos"
+        android:textSize="34sp"
+        app:cornerRadius="0dp"
+        app:icon="@drawable/baseline_recommend_24"
+        app:iconSize="55dp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:orientation="horizontal">
+
+        <com.google.android.material.bottomnavigation.BottomNavigationView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:background="#427544"
+            app:itemIconSize="55dp"
+            app:itemIconTint="@color/white"
+            app:menu="@menu/navigation_menu" />
+    </LinearLayout>
+
+</LinearLayout>
