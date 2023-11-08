@@ -7,24 +7,23 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
-public class HomeActivity extends AppCompatActivity {
+public class ConsumeActivity extends AppCompatActivity {
 
-    Button consume;
+    Button water;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_home);
+        setContentView(R.layout.activity_consume);
+        water=findViewById(R.id.buttonRegisterConsumeWater);
+        Intent registerWater= new Intent(getApplicationContext(),
+                WaterActivity.class);
 
-        consume=findViewById(R.id.buttonRegisterConsume);
-
-        Intent registerConsume= new Intent(getApplicationContext(),
-                ConsumeActivity.class);
-
-        consume.setOnClickListener(new View.OnClickListener() {
+        water.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(registerConsume);
+                startActivity(registerWater);
             }
         });
+
     }
 }

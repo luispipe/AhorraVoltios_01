@@ -7,7 +7,7 @@
     android:background="#D0C882"
     android:gravity="center_horizontal"
     android:orientation="vertical"
-    tools:context=".HomeActivity">
+    tools:context=".ConsumeActivity">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -32,36 +32,27 @@
         android:textStyle="bold" />
 
     <Button
-        android:id="@+id/buttonRegisterConsume"
+        android:id="@+id/buttonRegisterConsumeWater"
         android:layout_width="match_parent"
         android:layout_height="80dp"
-        android:backgroundTint="#009688"
-        android:text="Registrar Consumo"
+        android:layout_margin="10dp"
+        android:backgroundTint="#03A9F4"
+        android:text="Agua"
         android:textSize="34sp"
         app:cornerRadius="0dp"
-        app:icon="@drawable/baseline_app_registration_24"
+        app:icon="@drawable/baseline_water_drop_24"
         app:iconSize="55dp" />
 
     <Button
-        android:id="@+id/buttonStatistics"
+        android:id="@+id/buttonRegisterConsumeEnergy"
         android:layout_width="match_parent"
         android:layout_height="80dp"
-        android:backgroundTint="#187B1C"
-        android:text="Estadísticas"
+        android:layout_margin="10dp"
+        android:backgroundTint="#EFBA17"
+        android:text="Eléctricidad"
         android:textSize="34sp"
         app:cornerRadius="0dp"
-        app:icon="@drawable/baseline_analytics_24"
-        app:iconSize="55dp" />
-
-    <Button
-        android:id="@+id/buttonRecommendations"
-        android:layout_width="match_parent"
-        android:layout_height="80dp"
-        android:backgroundTint="#61D466"
-        android:text="Consejos"
-        android:textSize="34sp"
-        app:cornerRadius="0dp"
-        app:icon="@drawable/baseline_recommend_24"
+        app:icon="@drawable/baseline_electrical_services_24"
         app:iconSize="55dp" />
 
     <LinearLayout
