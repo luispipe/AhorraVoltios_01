@@ -36,7 +36,7 @@
         android:layout_width="match_parent"
         android:layout_height="80dp"
         android:backgroundTint="#009688"
-        android:text="Registrar Consumo"
+        android:text="Consumo"
         android:textSize="34sp"
         app:cornerRadius="0dp"
         app:icon="@drawable/baseline_app_registration_24"

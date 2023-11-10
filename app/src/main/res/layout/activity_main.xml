@@ -97,8 +97,8 @@
             android:layout_weight="1"
             android:text="Registrate Aquí"
             android:textAlignment="center"
-            android:textColor="#24A4DE"
-            android:textSize="16sp"
+            android:textColor="#1869AA"
+            android:textSize="18sp"
             android:textStyle="bold|italic" />
 
     </LinearLayout>

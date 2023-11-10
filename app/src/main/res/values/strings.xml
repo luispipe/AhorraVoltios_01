@@ -1,3 +1,11 @@
 <resources>
     <string name="app_name">AhorraVoltios_01</string>
+    <string name="recommendation_water_1">1.Cuando salgas de casa asegurarse de dejar los grifos cerrados.</string>
+    <string name="recommendation_water_2">2.Si se presenta alguna fuga de agua, llamar a un técnico de forma oportuna.</string>
+    <string name="recommendation_electricity_1">1.Desconectar los dispositivos despues de usarlos.</string>
+    <string name="recommendation_electricity_2">2.Al salir de casa asegurarse de dejar todas las luces apagadas.</string>
+    <string name="recommendation_electricity_3">3. Si un enchufe produce cortos, contactar rapidamente a un técnico.</string>
+    <string name="consume_acceptable">Su consumo esta por debajo del promedio, felicitaciones</string>
+    <string name="suggestions_text">A continuación, se listan algunas recomendaciones para que continue con este nivel de consumo</string>
+
 </resources>
