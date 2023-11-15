@@ -1,5 +1,7 @@
 package com.example.ahorravoltios_01;
 
+import static java.lang.Thread.sleep;
+
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
@@ -43,10 +45,19 @@ public class UserRegisterActivity extends AppCompatActivity {
                 if (validateUser()){
                     User user=createUser();
                     storageUser(user);
-                    startActivity(home);
+                    Toast.makeText(getApplicationContext(),"Registro Exitoso"
+                    ,Toast.LENGTH_LONG).show();
+                    try {
+                        sleep(500);
+                        startActivity(home);
+                        finish();
+                    } catch (InterruptedException e) {
+                        throw new RuntimeException(e);
+                    }
+
                 }else{
                     Toast.makeText(getApplicationContext(),
-                    "Asegurarse de que la información esta coorecta",Toast.LENGTH_LONG).show();
+                    "Asegurarse de que la información esta correcta",Toast.LENGTH_LONG).show();
                 }
             }
         });
@@ -111,10 +122,25 @@ public class UserRegisterActivity extends AppCompatActivity {
         return id;
     }
     public void storageUser(User user){
+        //Crear el archivo plano y darle una ruta
+
         File fileUser= new File(getFilesDir(),"user.txt");
 
+        /*try catch es un componente de java que permite capturar errores
+        *  en tiempo real, por lo general se utiliza cuando hay metodos que
+        * trabajan con datos.
+        *
+        * en el try se coloca la lógica que se ejecuta
+        * en el catch se captura e imprime los errores que se encuentren
+        * */
        try {
             FileWriter writer= new FileWriter(fileUser,true);
+
+       /*Buffer --> es un espacio de memoeria que nos permote almacenar
+         datos de forma temporal, máxima la eficiencia del procesamiento
+         de datos.
+       * */
+
             BufferedWriter bufferedWriter=new BufferedWriter(writer);
             bufferedWriter.write( user.getIdUser()+","+
                                      user.getName()+","+
@@ -124,10 +150,9 @@ public class UserRegisterActivity extends AppCompatActivity {
                                 );
             bufferedWriter.newLine();
             bufferedWriter.close();
-       }catch (Exception e){
-           e.printStackTrace();
+       }catch (Exception error){
+           error.printStackTrace();
        }
-
 
     }
 
