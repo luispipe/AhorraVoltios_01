@@ -22,6 +22,11 @@ public class HomeActivity extends AppCompatActivity {
         Intent registerConsume= new Intent(getApplicationContext(),
                 ConsumeActivity.class);
 
+        Intent receive= getIntent();
+        String id= receive.getStringExtra("idUser");
+
+        registerConsume.putExtra("idUser",id);
+
         Intent statistics_view= new Intent(getApplicationContext(),
                 StatisticsActivity.class);
 

@@ -17,11 +17,17 @@ public class ConsumeActivity extends AppCompatActivity {
         water=findViewById(R.id.buttonRegisterConsumeWater);
         electricity=findViewById(R.id.buttonRegisterConsumeEnergy);
 
+        Intent receive= getIntent();
+        String id= receive.getStringExtra("idUser");
+
         Intent registerWater= new Intent(getApplicationContext(),
                 WaterActivity.class);
+        registerWater.putExtra("idUser",id);
 
         Intent registerElectricity= new Intent(getApplicationContext(),
                 ElectricityActivity.class);
+        registerElectricity.putExtra("idUser",id);
+
         water.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

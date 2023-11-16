@@ -39,22 +39,21 @@ public class MainActivity extends AppCompatActivity {
         password=findViewById(R.id.editTextTextPasswordLogin);
 
         File fileReader = new File(getFilesDir(),"user.txt");
-        try {
-            FileWriter writer= new FileWriter(fileReader,true);
-        }catch (IOException e){
-            throw new RuntimeException();
-        }
+
 
         ArrayList<User> usersList= listUsers(fileReader);
 
         Intent home= new Intent(getApplicationContext(),
                 HomeActivity.class);
+
         Intent registerUser= new Intent(getApplicationContext(),
                 UserRegisterActivity.class);
+
 
         login.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+            boolean state= false;
             if (user.getText().toString().isEmpty() ||
                 password.getText().toString().isEmpty()){
                 Toast.makeText(getApplicationContext(),"Ambos campos deben estar completos",
@@ -64,7 +63,11 @@ public class MainActivity extends AppCompatActivity {
                     if (i.getName().equals(user.getText().toString())||
                             i.getEmail().equals(user.getText().toString())||
                             i.getPhone().equals(user.getText().toString())){
+                        state=true;
                         if(i.getPassword().equals(password.getText().toString())){
+
+                            home.putExtra("idUser",i.getIdUser());
+
                         Toast.makeText(getApplicationContext(),
                     "Los datos son correcto",Toast.LENGTH_LONG).show();
                             try {
@@ -78,11 +81,13 @@ public class MainActivity extends AppCompatActivity {
                            Toast.makeText(getApplicationContext(),
                    "La contraseña es incorrecta",Toast.LENGTH_LONG).show();
                         }
-                    }else {
-                       Toast.makeText(getApplicationContext(),
-                   "Este usuario no esta registrado",Toast.LENGTH_LONG).show();
                     }
                 }
+                if (!state){
+                    Toast.makeText(getApplicationContext(),
+                            "Este usuario no esta registrado",Toast.LENGTH_LONG).show();
+                }
+
             }
 
             }

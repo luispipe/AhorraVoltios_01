@@ -2,7 +2,7 @@ package com.example.ahorravoltios_01.models;
 
 public class Agua {
     private int quantity, price;
-    private String month,idUser,tipo;
+    private String month,idUser;
 
     public Agua(int quantity, int price, String month,String idUser) {
         this.quantity = quantity;
