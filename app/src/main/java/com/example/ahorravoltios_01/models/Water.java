@@ -1,10 +1,10 @@
 package com.example.ahorravoltios_01.models;
 
-public class Agua {
+public class Water {
     private int quantity, price;
     private String month,idUser;
 
-    public Agua(int quantity, int price, String month,String idUser) {
+    public Water(int quantity, int price, String month, String idUser) {
         this.quantity = quantity;
         this.price = price;
         this.month = month;
