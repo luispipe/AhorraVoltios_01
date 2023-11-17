@@ -45,7 +45,7 @@ public class StatisticsActivity extends AppCompatActivity {
         totalConsumeElectricity(electricityList);
 
         int totalPay_value=totalPayWater(waterList)+totalPayElectricity(electricityList);
-        totalPay.setText(totalPay_value+"");
+        totalPay.setText("$ "+totalPay_value+"");
 
     }
 
@@ -60,7 +60,7 @@ public class StatisticsActivity extends AppCompatActivity {
                  month=i.getMonth();
              }
          }
-        totalWater.setText(total+"L");
+        totalWater.setText(total+" L");
         monthWater.setText(month);
         quantityWater.setText(max+"");
     }
@@ -76,9 +76,9 @@ public class StatisticsActivity extends AppCompatActivity {
                 month=i.getMonth();
             }
         }
-        totalElectricity.setText(total+"Kwh");
+        totalElectricity.setText(total+" Kwh");
         quantityElectricity.setText(max+"");
-        monthWater.setText(month);
+        monthElectricity.setText(month);
     }
 
     public ArrayList<Water> listWater(File water,String user){
