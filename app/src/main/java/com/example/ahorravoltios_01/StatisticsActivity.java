@@ -4,6 +4,8 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.Button;
 import android.widget.TextView;
 
 import com.example.ahorravoltios_01.models.Electricity;
@@ -19,6 +21,8 @@ public class StatisticsActivity extends AppCompatActivity {
     TextView totalWater,totalElectricity,totalPay, monthWater,
             quantityWater, monthElectricity,quantityElectricity;
 
+    Button more;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -31,6 +35,7 @@ public class StatisticsActivity extends AppCompatActivity {
         quantityWater=findViewById(R.id.tv_max_quantity_water);
         monthElectricity=findViewById(R.id.tv_month_max_electricity);
         quantityElectricity=findViewById(R.id.tv_max_quantity_electricity);
+        more=findViewById(R.id.buttonMore);
 
         Intent receive= getIntent();
         String id= receive.getStringExtra("idUser");
@@ -46,6 +51,16 @@ public class StatisticsActivity extends AppCompatActivity {
 
         int totalPay_value=totalPayWater(waterList)+totalPayElectricity(electricityList);
         totalPay.setText("$ "+totalPay_value+"");
+
+        Intent moreStatistics= new Intent(getApplicationContext(), MoreStatisticsActivity.class);
+        moreStatistics.putExtra("idUser",id);
+
+        more.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(moreStatistics);
+            }
+        });
 
     }
 
