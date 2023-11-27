@@ -7,9 +7,13 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
+import com.google.android.material.bottomnavigation.BottomNavigationView;
+
 public class HomeActivity extends AppCompatActivity {
 
     Button consume, statistic, recommendations;
+
+    BottomNavigationView nav;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -18,6 +22,7 @@ public class HomeActivity extends AppCompatActivity {
         consume=findViewById(R.id.buttonRegisterConsume);
         statistic=findViewById(R.id.buttonStatistics);
         recommendations=findViewById(R.id.buttonRecommendations);
+        nav=findViewById(R.id.btNav);
 
         Intent registerConsume= new Intent(getApplicationContext(),
                 ConsumeActivity.class);
@@ -33,6 +38,7 @@ public class HomeActivity extends AppCompatActivity {
 
         Intent recommendations_view= new Intent(getApplicationContext(),
                 RecommendationActivity.class);
+
 
         consume.setOnClickListener(new View.OnClickListener() {
             @Override
