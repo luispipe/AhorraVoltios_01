@@ -136,7 +136,7 @@ public class UserRegisterActivity extends AppCompatActivity {
        try {
             FileWriter writer= new FileWriter(fileUser,true);
 
-       /*Buffer --> es un espacio de memoeria que nos permote almacenar
+       /*Buffer --> es un espacio de memoria que nos permote almacenar
          datos de forma temporal, máxima la eficiencia del procesamiento
          de datos.
        * */

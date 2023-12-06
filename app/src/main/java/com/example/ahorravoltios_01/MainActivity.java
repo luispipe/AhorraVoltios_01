@@ -76,6 +76,7 @@ public class MainActivity extends AppCompatActivity {
                                 throw new RuntimeException(e);
                             }
                             startActivity(home);
+                            finish();
                             break;
                         }else {
                            Toast.makeText(getApplicationContext(),
